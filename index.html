@@ -28,9 +28,6 @@
 
 
         <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 bg-slate-900 fixed-start" id="sidenav-main">
-
-
-
           <div class="sidenav-header" id="sidenav-header-logo">
             <a class="navbar-brand d-flex align-items-center m-0 mt-5"
                href="/"
@@ -366,6 +363,8 @@
           </div>
           <!-- End Page title and Breadcrumbs -->
 
+          
+
 
 
           <form method="POST">
@@ -375,78 +374,267 @@
                 <div class="row mt-3">
                   <div class="col-12">
                     <div class="card border shadow-xs h-100">
-                      <div class="card-header pb-0 p-3">
-
-                        <p>
-                        <i>
-                          Giving a user access to this folder will give them
-                          this access to all contracts and all sub-folders within this folder
-                        </i>
-                        </p>
-                        <h6 class="mb-0 font-weight-semibold text-lg">Owner permissions</h6>
-                        <p class="text-sm mb-1">Users added to this list will have complete access to the <i>Home </i>folder.</p>
-                        <div class="py-4">
-                          <select name="owners" class="permission-select w-100" name="states[]" multiple="multiple">
-
-                            <option value="1">john.smith@example.com</option>
-                            <option value="2">sarah.jones@example.com</option>
-                            <option value="3">james.brown@example.com</option>
-                            <option value="4">linda.taylor@example.com</option>
-                            <option value="5">robert.wilson@example.com</option>
-                            <option value="6">jennifer.johnson@example.com</option>
-                            <option value="7">michael.miller@example.com</option>
-                            <option value="8">elizabeth.moore@example.com</option>
-                            <option value="9">william.davis@example.com</option>
-                            <option value="10">emily.williams@example.com</option>
-
-                          </select>
-                        </div>
-
-                        <h6 class="mb-0 font-weight-semibold text-lg">Editor permissions</h6>
-                        <p class="text-sm mb-1">Users added to this list will be able to read, update and delete this folder and its contents.</p>
-                        <div class="py-4">
-                          <select name="editors" class="permission-select w-100" name="states[]" multiple="multiple">
-
-                            <option value="1">john.smith@example.com</option>
-                            <option value="2">sarah.jones@example.com</option>
-                            <option value="3">james.brown@example.com</option>
-                            <option value="4">linda.taylor@example.com</option>
-                            <option value="5">robert.wilson@example.com</option>
-                            <option value="6">jennifer.johnson@example.com</option>
-                            <option value="7">michael.miller@example.com</option>
-                            <option value="8">elizabeth.moore@example.com</option>
-                            <option value="9">william.davis@example.com</option>
-                            <option value="10">emily.williams@example.com</option>
-
-                          </select>
-                          </select>
-                        </div>
-
-                        <h6 class="mb-0 font-weight-semibold text-lg">Reader permissions</h6>
-                        <p class="text-sm mb-1">Users added to this list will only be able to read this folder and its content.</p>
-                        <div class="py-4">
-                          <select name="readers" class="permission-select w-100" 
-                                  name="states[]" multiple="multiple" allowClear="true">
-
-                            <option value="1">john.smith@example.com</option>
-                            <option value="2">sarah.jones@example.com</option>
-                            <option value="3">james.brown@example.com</option>
-                            <option value="4">linda.taylor@example.com</option>
-                            <option value="5">robert.wilson@example.com</option>
-                            <option value="6">jennifer.johnson@example.com</option>
-                            <option value="7">michael.miller@example.com</option>
-                            <option value="8">elizabeth.moore@example.com</option>
-                            <option value="9">william.davis@example.com</option>
-                            <option value="10">emily.williams@example.com</option>
-
-                          </select>
-                        </div>
-
-                        <div class="my-3 text-end">
-                          <button class="btn btn-primary">Save</button>
+                      <div class="card-header">
+                        <span><i>Giving a user access to this folder will give them
+                          this access to all contracts and all sub-folders within this folder</i></span>
+                      </div>
+                      <div class="card-body">
+                        <div class="table-responsive p-0">
+                          <table class="table align-items-center mb-0">
+                            <thead class="bg-gray-100">
+                              <tr>
+                                <th class="text-secondary text-xs font-weight-semibold opacity-7">Member</th>
+                                <th class="text-secondary text-xs font-weight-semibold opacity-7">Mail</th>
+                                <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Owner</th>
+                                <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Editor</th>
+                                <th class="text-secondary text-xs font-weight-semibold opacity-7 ps-2">Reader</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div class="d-flex px-2 py-1">
+                                    <div class="d-flex align-items-center">
+                                      <img src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/marie.jpg" class="avatar avatar-sm rounded-circle me-2" alt="user4">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center ms-1">
+                                      <h6 class="mb-0 text-sm font-weight-semibold">John Smith</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <p class="text-sm text-secondary mb-0">john.smith@example.com</p>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="d-flex px-2 py-1">
+                                    <div class="d-flex align-items-center">
+                                      <img src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-6.jpg" class="avatar avatar-sm rounded-circle me-2" alt="user4">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center ms-1">
+                                      <h6 class="mb-0 text-sm font-weight-semibold">Sarah Jones</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <p class="text-sm text-secondary mb-0">sarah.jones@example.com</p>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" >
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="d-flex px-2 py-1">
+                                    <div class="d-flex align-items-center">
+                                      <img src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/marie.jpg" class="avatar avatar-sm rounded-circle me-2" alt="user4">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center ms-1">
+                                      <h6 class="mb-0 text-sm font-weight-semibold">Linda Taylon</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <p class="text-sm text-secondary mb-0">linda.taylor@example.com</p>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="d-flex px-2 py-1">
+                                    <div class="d-flex align-items-center">
+                                      <img src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-6.jpg" class="avatar avatar-sm rounded-circle me-2" alt="user4">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center ms-1">
+                                      <h6 class="mb-0 text-sm font-weight-semibold">Robert Wilson</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <p class="text-sm text-secondary mb-0">robert.wilson@example.com</p>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" >
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="d-flex px-2 py-1">
+                                    <div class="d-flex align-items-center">
+                                      <img src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/marie.jpg" class="avatar avatar-sm rounded-circle me-2" alt="user4">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center ms-1">
+                                      <h6 class="mb-0 text-sm font-weight-semibold">Jennifer Johnson</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <p class="text-sm text-secondary mb-0">jennifer.johnson@example.com</p>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="d-flex px-2 py-1">
+                                    <div class="d-flex align-items-center">
+                                      <img src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-6.jpg" class="avatar avatar-sm rounded-circle me-2" alt="user4">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center ms-1">
+                                      <h6 class="mb-0 text-sm font-weight-semibold">Michael Miller</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <p class="text-sm text-secondary mb-0">michael.miller@example.com</p>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="d-flex px-2 py-1">
+                                    <div class="d-flex align-items-center">
+                                      <img src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/marie.jpg" class="avatar avatar-sm rounded-circle me-2" alt="user4">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center ms-1">
+                                      <h6 class="mb-0 text-sm font-weight-semibold">Elizabeth Moore</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <p class="text-sm text-secondary mb-0">elizabeth.moore@example.com</p>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" >
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="d-flex px-2 py-1">
+                                    <div class="d-flex align-items-center">
+                                      <img src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-6.jpg" class="avatar avatar-sm rounded-circle me-2" alt="user4">
+                                    </div>
+                                    <div class="d-flex flex-column justify-content-center ms-1">
+                                      <h6 class="mb-0 text-sm font-weight-semibold">William Davis</h6>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <p class="text-sm text-secondary mb-0">william.davis@example.com</p>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="">
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" checked="">
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
